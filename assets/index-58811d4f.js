@@ -4,7 +4,7 @@
   <img src="${f}" alt="Goggles" id="gogglesimg" />
   <div id="div1" class="flex">
     <h3>Hello!, I'm Goggles!</h3>
-    <p>I'm a Web Developer &#128579;</p>
+    <p>I'm a Web Developer</p>
   </div>
 </div>
 <button id="linksbtn" class="btn flex">Links</button>
