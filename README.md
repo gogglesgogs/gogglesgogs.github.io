@@ -1,3 +1,4 @@
+```
 Inspiration: https://www.nexxel.dev/
 alt links (cloudflare):
 • gogglesinc.pages.dev
@@ -73,3 +74,4 @@ main
 content
 ...
 /main
+```
