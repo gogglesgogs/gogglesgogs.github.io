@@ -1,18 +1,223 @@
-<!doctype html>
-<html
-  lang="en"
-  class="bg-neutral-100 text-black dark:bg-neutral-950 dark:text-white"
->
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/goggles-svg.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Goggles Gogs</title>
-  </head>
-  <body
-    class="mx-4 mb-40 mt-8 flex max-w-2xl flex-col antialiased md:flex-row lg:mx-auto"
-  >
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="author" content="Goggels" />
+		<meta name="description" content="Goggles's Portfolio" />
+		<meta name="keywords" content="Goggles, goggles, portfolio, Portfolio, gogglesgogs, gogs" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/svg+xml" href="https://gogglesinc.github.io/cdn/images/goggles-svg.svg" />
+		<title>Goggles</title>
+	</head>
+	<body>
+		<div id="app">
+			<div id="warning-sign"><p>Your browser window is too small. Please use a larger screen, preferably fullscreen or view on a desktop for the best experience.</p></div>
+			<header class="primaryheader">
+				<div class="links">
+					<a href="#" style="height: 35px" aria-label="Landing page">
+						<img src="https://gogglesinc.github.io/cdn/images/goggles-small.png" alt />
+					</a>
+					<a href="#About" aria-label="About page">About</a>
+					<a href="#Skills" aria-label="Skills page">Skills</a>
+					<a href="#Projects" aria-label="Projects page">Projects</a>
+					<a href="#Contacts" aria-label="Contacts page">Contacts</a>
+				</div>
+				<div class="time">
+					<p id="daytime"></p>
+				</div>
+			</header>
+			<section class="Landing">
+				<div class="helloskillscontainer">
+					<p class="hellotyped-out">Hello!</p>
+				</div>
+				<p class="scroll bounce">
+					Scroll down <br />
+					<svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#ccd5ff"><path d="M480-344 240-584l43-43 197 197 197-197 43 43-240 240Z" /></svg>
+				</p>
+			</section>
+			<section id="About" class="About">
+				<div class="imgcontainer">
+					<img id="img-self" loading="lazy" src="/khoa.png" alt="Picture of Khoa" />
+					<img id="img-goggles" loading="lazy" src="https://gogglesinc.github.io/cdn/images/goggles-png.png" alt="Picture of Goggles" />
+				</div>
+				<div class="about">
+					<h1>I'm <span>Khoa</span>,</h1>
+					<h3><span style="color: var(--text)" title="also known as">a.k.a</span> <span id="goggles">Goggles</span></h3>
+					<p>
+						Born in <a target="_blank" href="https://maps.app.goo.gl/9TcYxZa3D79FTW1KA">Hung Yen (Vietnam)</a> in <span>2008</span>. I'm currently a student at
+						<a target="_blank" href="https://greenfield.edu.vn">Greenfield School</a> whos good at <span>problem solving</span> and interested in <span>computer science</span>. I'm currently learning
+						<span>web development</span> to persue my dream career.
+					</p>
+				</div>
+			</section>
+			<section id="Skills" class="Skills">
+				<h1>Skills</h1>
+				<h1>
+					<svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+						<path
+							d="M160 389a20.91 20.91 0 01-13.82-5.2l-128-112a21 21 0 010-31.6l128-112a21 21 0 0127.66 31.61L63.89 256l109.94 96.19A21 21 0 01160 389zM352 389a21 21 0 01-13.84-36.81L448.11 256l-109.94-96.19a21 21 0 0127.66-31.61l128 112a21 21 0 010 31.6l-128 112A20.89 20.89 0 01352 389zM208 437a21 21 0 01-20.12-27l96-320a21 21 0 1140.23 12l-96 320A21 21 0 01208 437z"
+						/>
+					</svg>
+					Languages:
+				</h1>
+				<h1>
+					<svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+						<path
+							d="M432 32H80a64.07 64.07 0 00-64 64v320a64.07 64.07 0 0064 64h352a64.07 64.07 0 0064-64V96a64.07 64.07 0 00-64-64zM96 256a16 16 0 01-10-28.49L150.39 176 86 124.49a16 16 0 1120-25l80 64a16 16 0 010 25l-80 64A16 16 0 0196 256zm160 0h-64a16 16 0 010-32h64a16 16 0 010 32z"
+						/>
+					</svg>
+					Runtimes:
+				</h1>
+				<h1>
+					<svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+						<path
+							d="M503.58 126.2a16.85 16.85 0 00-27.07-4.55l-51.15 51.15a11.15 11.15 0 01-15.66 0l-22.48-22.48a11.17 11.17 0 010-15.67l50.88-50.89a16.85 16.85 0 00-5.27-27.4c-39.71-17-89.08-7.45-120 23.29-26.81 26.61-34.83 68-22 113.7a11 11 0 01-3.16 11.1L114.77 365.1a56.76 56.76 0 1080.14 80.18L357 272.08a11 11 0 0110.9-3.17c45 12 86 4 112.43-22 15.2-15 25.81-36.17 29.89-59.71 3.83-22.2 1.41-44.44-6.64-61z"
+						/>
+						<path
+							d="M437.33 378.41c-13.94-11.59-43.72-38.4-74.07-66.22l-66.07 70.61c28.24 30 53.8 57.85 65 70.88l.07.08A30 30 0 00383.72 464h1.1a30.11 30.11 0 0021-8.62l.07-.07 33.43-33.37a29.46 29.46 0 00-2-43.53zM118.54 214.55a20.48 20.48 0 00-3-10.76 2.76 2.76 0 012.62-4.22h.06c.84.09 5.33.74 11.7 4.61 4.73 2.87 18.23 12.08 41.73 35.54a34.23 34.23 0 007.22 22.12l66.23-61.55a33.73 33.73 0 00-21.6-9.2 2.65 2.65 0 01-.21-.26l-.65-.69-24.54-33.84a28.45 28.45 0 01-4-26.11 35.23 35.23 0 0111.78-16.35c5.69-4.41 18.53-9.72 29.44-10.62a52.92 52.92 0 0115.19.94 65.57 65.57 0 017.06 2.13 15.46 15.46 0 002.15.63 16 16 0 0016.38-25.06c-.26-.35-1.32-1.79-2.89-3.73a91.85 91.85 0 00-9.6-10.36c-8.15-7.36-29.27-19.77-57-19.77a123.13 123.13 0 00-46.3 9c-38.37 15.45-63.47 36.58-75.01 47.79l-.09.09A222.14 222.14 0 0063.7 129.5a27 27 0 00-4.7 11.77 7.33 7.33 0 01-7.71 6.17H50.2a20.65 20.65 0 00-14.59 5.9L6.16 182.05l-.32.32a20.89 20.89 0 00-.24 28.72c.19.2.37.39.57.58L53.67 258a21 21 0 0014.65 6 20.65 20.65 0 0014.59-5.9l29.46-28.79a20.51 20.51 0 006.17-14.76z"
+						/>
+					</svg>
+					Frameworks:
+				</h1>
+				<h1>
+					<svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+						<path
+							d="M104 160a56 56 0 1156-56 56.06 56.06 0 01-56 56zM256 160a56 56 0 1156-56 56.06 56.06 0 01-56 56zM408 160a56 56 0 1156-56 56.06 56.06 0 01-56 56zM104 312a56 56 0 1156-56 56.06 56.06 0 01-56 56zM256 312a56 56 0 1156-56 56.06 56.06 0 01-56 56zM408 312a56 56 0 1156-56 56.06 56.06 0 01-56 56zM104 464a56 56 0 1156-56 56.06 56.06 0 01-56 56zM256 464a56 56 0 1156-56 56.06 56.06 0 01-56 56zM408 464a56 56 0 1156-56 56.06 56.06 0 01-56 56z"
+						/>
+					</svg>
+					Others:
+				</h1>
+				<div class="skillschild">
+					<img loading="lazy" src="/html.svg" alt="HTML" />
+				</div>
+				<div class="skillschild">
+					<img loading="lazy" src="/css.svg" alt="CSS" />
+				</div>
+				<div class="skillschild">
+					<img loading="lazy" src="/js.svg" alt="Javascript" />
+				</div>
+				<div class="skillschild">
+					<img loading="lazy" src="/node.svg" alt="Nodejs" />
+				</div>
+				<div class="skillschild">
+					<img loading="lazy" src="/npm.svg" alt="NPM" />
+				</div>
+				<div class="skillschild">
+					<img loading="lazy" src="/react.svg" alt="React" />
+				</div>
+				<div class="skillschild">
+					<img loading="lazy" src="express.svg" alt="Express" />
+				</div>
+				<div class="skillschild">
+					<img loading="lazy" src="/figma.svg" alt="Figma" />
+				</div>
+				<div class="skillschild">
+					<img loading="lazy" src="/vite.svg" alt="Vite" />
+				</div>
+			</section>
+			<section id="Projects" class="Projects">
+				<h1>Projects</h1>
+				<div id="cards">
+					<div class="card">
+						<a href="https://github.com/gogglesgogs/Goggles-Portfolio" target="_blank" aria-label="Goggles Portfolio"></a>
+						<div class="card-content">
+							<div class="card-image">
+								<img loading="lazy" src="/khoa.png" alt="" />
+							</div>
+							<div class="card-info-wrapper">
+								<div class="card-info">
+									<h3>Goggles Portfolio</h3>
+									<h4>A personal portfolio website built to showcase my web development skills, projects, and achievements.</h4>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<a href="https://github.com/gogglesgogs/GogglesInc-Website" target="_blank" aria-label="GogglesInc Website"></a>
+						<div class="card-content">
+							<div class="card-image">
+								<img src="/gogglesincweb.svg" alt="" />
+							</div>
+							<div class="card-info-wrapper">
+								<div class="card-info">
+									<h3>GogglesInc Website</h3>
+									<h4>An imaginary company website built to demonstrate my ability to create modern, responsive layouts.</h4>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<a href="https://github.com/gogglesgogs/todo-app" target="_blank" aria-label="Todo App"></a>
+						<div class="card-content">
+							<div class="card-image">
+								<img src="/todoapp.svg" alt="" />
+							</div>
+							<div class="card-info-wrapper">
+								<div class="card-info">
+									<h3>Todo App</h3>
+									<h4>A simple and intuitive todo app designed to organize daily tasks. Built using multiple frameworks.</h4>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<a href="https://github.com/gogglesgogs" target="_blank" aria-label="Gradient Generator"></a>
+						<div class="card-content">
+							<div class="card-image">
+								<img src="/lgg.svg" alt="" />
+							</div>
+							<div class="card-info-wrapper">
+								<div class="card-info">
+									<h3>Gradient Generator</h3>
+									<h4>A Gradient Generator to help create stunning gradient backgrounds with ease.</h4>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<a href="https://github.com/GogglesInc" target="_blank" aria-label="GogglesInc"></a>
+						<div class="card-content">
+							<div class="card-image">
+								<img src="/gogglesinc.svg" alt="" />
+							</div>
+							<div class="card-info-wrapper">
+								<div class="card-info">
+									<h3>GogglesInc</h3>
+									<h4>GogglesInc is a imaginary tech company managed by me, ultimately to showcase and refine my web design skills.</h4>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<a href="https://github.com/Gogs-side-projects" target="_blank" aria-label="Goggles's Side Projects"></a>
+						<div class="card-content">
+							<div class="card-image">
+								<img src="/gsp.svg" alt="" />
+							</div>
+							<div class="card-info-wrapper">
+								<div class="card-info">
+									<h3>Goggles's Side Projects</h3>
+									<h4>A collection of random web applications and tools i created to satisfy my boredom.</h4>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="Contacts" class="Contacts">
+				<h1>Contacts</h1>
+			</section>
+			<footer>
+				<a href="#About" aria-label="About Page">About</a>
+				<a href="#Skills" aria-label="Skills page">Skills</a>
+				<a href="#Projects" aria-label="Projects page">Projects</a>
+				<a href="#Contacts" aria-label="Contacts page">Contacts</a>
+				<p>Created by<span>Goggles</span></p>
+			</footer>
+			<button id="goTop" aria-label="Go to top of page">
+				<svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#ccd5ff"><path d="M480-554 283-357l-43-43 240-240 240 240-43 43-197-197Z" /></svg>
+			</button>
+		</div>
+		<script type="module" src="/main.js"></script>
+	</body>
 </html>

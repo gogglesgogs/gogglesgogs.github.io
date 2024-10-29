@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="https://gogglesinc.github.io/cdn/images/goggles-svg.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Goggles's Portfolio</title>
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+			:root {
+				font-family: 'JetBrains Mono', monospace;
+				line-height: 1.5;
+				font-optical-sizing: auto;
+				font-weight: 400;
+				font-style: normal;
+				color: #ccd5ff;
+				background-color: #00020a;
+				font-synthesis: none;
+				text-rendering: optimizeLegibility;
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
+			}
+
+			a {
+				font-weight: 500;
+				color: #6b86ff;
+			}
+
+			a:hover {
+				color: #2749f1;
+			}
+
+			body {
+				margin: 0;
+				display: flex;
+				place-items: center;
+				min-width: 320px;
+				min-height: 100vh;
+			}
+
+			#app {
+				max-width: 1280px;
+				margin: 0 auto;
+				display: flex;
+			}
+
+			.container {
+				display: flex;
+				place-content: center;
+				place-items: center;
+				flex-direction: column;
+			}
+
+			h1 {
+				font-size: 10rem;
+				margin: 0;
+			}
+
+			p {
+				font-size: 1.5rem;
+				margin: 10px;
+			}
+
+			.container p:nth-child(3) {
+				font-size: 1rem;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="app">
+			<div class="container">
+				<h1 id="random"></h1>
+				<p>404 Page not found :&#40;</p>
+				<a href="/">Back to homepage</a>
+			</div>
+		</div>
+		<script>
+			const element = document.getElementById('random');
+			let words = ['got lost!', 'what?', 'why?', 'how?', 'uhhh', 'huh?'];
+			let index = 0;
+			function updateWord() {
+				if (index < words.length) {
+					element.innerHTML = words[index];
+					index++;
+					setTimeout(updateWord, 1000);
+				} else {
+					index = 0;
+					updateWord();
+				}
+			}
+			updateWord();
+		</script>
+	</body>
+</html>
