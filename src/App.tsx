@@ -95,7 +95,7 @@ function App() {
           <section className="text-left">
             <h3 className="mb-8 text-xl font-medium">skills</h3>
             <ul>
-              <li className='mb-6 font-medium before:content-["●"] before:pr-2 before:text-[0.5rem]'>
+              <li className='mb-6 font-medium before:content-["●"] before:pr-2 before:text-[0.5rem] flex items-center justify-center'>
                 <a
                   href="https://developer.mozilla.org/en-US/docs/Web/HTML"
                   target="_blank"
@@ -107,7 +107,7 @@ function App() {
                   hypertext markup language (.html)
                 </p>
               </li>
-              <li className='mb-6 font-medium before:content-["●"] before:pr-2 before:text-[0.5rem]'>
+              <li className='mb-6 font-medium before:content-["●"] before:pr-2 before:text-[0.5rem] flex items-center justify-center'>
                 <a
                   href="https://developer.mozilla.org/en-US/docs/Web/CSS"
                   target="_blank"
@@ -119,7 +119,7 @@ function App() {
                   cascading style sheets (.css)
                 </p>
               </li>
-              <li className='mb-6 font-medium before:content-["●"] before:pr-2 before:text-[0.5rem]'>
+              <li className='mb-6 font-medium before:content-["●"] before:pr-2 before:text-[0.5rem] flex items-center justify-center'>
                 <a
                   href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
                   target="_blank"
@@ -131,7 +131,7 @@ function App() {
                   javascript (.js)
                 </p>
               </li>
-              <li className='mb-6 font-medium before:content-["●"] before:pr-2 before:text-[0.5rem]'>
+              <li className='mb-6 font-medium before:content-["●"] before:pr-2 before:text-[0.5rem] flex items-center justify-center'>
                 <a
                   href="https://react.dev/"
                   target="_blank"
@@ -143,7 +143,7 @@ function App() {
                   a javascript library for web and native user interfaces
                 </p>
               </li>
-              <li className='mb-6 font-medium before:content-["●"] before:pr-2 before:text-[0.5rem]'>
+              <li className='mb-6 font-medium before:content-["●"] before:pr-2 before:text-[0.5rem] flex items-center justify-center'>
                 <a
                   href="https://nodejs.org/"
                   target="_blank"
