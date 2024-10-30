@@ -267,6 +267,56 @@ function App() {
               className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
               rel="noopener noreferrer"
               target="_blank"
+              href="https://www.instagram.com/gogglesgogs/profilecard/?igsh=MTRpeHVwZzh6MWxsbQ=="
+            >
+              <p className="mr-2 h-7">instagram</p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                className="h-5 w-5"
+              >
+                <path d="M7 7h10v10"></path>
+                <path d="M7 17 17 7"></path>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a
+              className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://www.facebook.com/gogglesgogs"
+            >
+              <p className="mr-2 h-7">facebook</p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                className="h-5 w-5"
+              >
+                <path d="M7 7h10v10"></path>
+                <path d="M7 17 17 7"></path>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a
+              className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
+              rel="noopener noreferrer"
+              target="_blank"
               href="https://discord.com/users/799597159661699112"
             >
               <p className="mr-2 h-7">discord</p>
