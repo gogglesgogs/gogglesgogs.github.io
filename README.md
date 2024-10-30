@@ -1,27 +1,60 @@
+# Goggles's Portfolio
+
+**Links**:
+- [gogglesgogs.github.io ↗️](https://gogglesgogs.github.io)  
+- [goggles.pages.dev ↗️](https://goggles.pages.dev)  
+
+**Inspiration**:
+- [https://nexxel.dev/ ↗️](https://nexxel.dev/)
+- [https://paco.me ↗️](https://paco.me)
+
+**Navigation**:
+
+```html
+<nav>
+home(/) blog(/blog) terminal(/term)
+</nav>
 ```
-Inspiration: https://www.nexxel.dev/
-alt links (cloudflare):
-• gogglesinc.pages.dev
-• goggles.pages.dev
 
-nav
-home blog terminal
-/nav
+**Footer**:
 
-footer
-goggles
-(hidden)
-blockquote
-"Any application that can be written in JavaScript, will eventually be written in JavaScript." - Jeff Atwood • cite co-founder of Stack Overflow /cite
-/blockquote
-also here are some old versions of this website
-ps: i dont
-v1 v2
-/footer
+<details>
+<summary>goggles.gogs</summary>
+<br>
 
-/, /home
+> "Any application that can be written in JavaScript, will eventually be written in JavaScript."
+>
+> Jeff Atwood • co-founder of Stack Overflow
+> 
+> p/s: here are some old versions of my portfolio. not garuanteed if the site will function correctly tho *v1(/v1)* *v2(/v2)*
 
-main
+</details>
+
+```html
+<footer>
+goggles.gogs
+
+<div class="hidden">
+
+<blockquote>
+"Any application that can be written in JavaScript, will eventually be written in JavaScript." - Jeff Atwood • <cite> co-founder of Stack Overflow </cite>
+</blockquote>
+
+<p>
+p/s: here are some old versions of my portfolio. not garuanteed if the site will function correctly tho
+v1(/v1) v2(/v2)
+</p>
+
+</div>
+</footer>
+```
+
+**Routes**:
+
+*/, /home*
+
+```html
+<main>
 goggles.gogs (hover: nguyen khoa)
 hung yen, vietnam
 high school student @ Greenfield School
@@ -45,33 +78,40 @@ Blogs:
 Contact me (via {link user hovered})
 • email (hover(tooltip): ngkhoa0075@gmail.com)
 • discord (hover(tooltip): goggles.gogs)
+• instagram (hover(tooltip): gogglesgogs)
 • github (hover(tooltip): gogglesgogs)
-/main
+</main>
+```
 
-/blogs
+*/blogs*
 
-main
-div
+```html
+<main>
+<div>
 want more blogs or updates? subscribe. (hover:promise no spams)
-form
+<form>
 {email}
 subscribe
-/form
-/div
-ul
-li
+</form>
+</div>
+<ul>
+<li>
 [title](link)
 {desc}
 {date} + {views}
-/li
-/ul
-/main
-/blogs/:id
-main
+</li>
+</ul>
+</main>
+```
+
+*/blogs/:id*
+
+```html
+<main>
 {title}
 {date} + {views}
 ...
 content
 ...
-/main
+</main>
 ```
