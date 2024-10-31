@@ -1,14 +1,18 @@
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
-import "./index.css";
-import App from "./App.tsx";
-import Nav from "./Nav.tsx";
-import Footer from "./Footer.tsx";
+import { StrictMode, lazy } from 'react';
+import { createRoot } from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
+import './index.css';
 
-createRoot(document.getElementById("root")!).render(
+const App = lazy(() => import('./App.tsx'));
+const Nav = lazy(() => import('./components/Nav.tsx'));
+const Footer = lazy(() => import('./components/Footer.tsx'));
+
+createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <Nav />
-    <App />
-    <Footer />
+    <BrowserRouter>
+      <Nav />
+      <App />
+      <Footer />
+    </BrowserRouter>
   </StrictMode>,
 );

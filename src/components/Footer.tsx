@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import cn from './utils/cn';
+import cn from '../utils/cn';
+import { Link } from 'react-router-dom';
 
 function Footer() {
   const [isOpen, setOpen] = useState(false);
@@ -16,26 +17,38 @@ function Footer() {
         className="flex w-full cursor-default flex-col items-center justify-between space-y-4 sm:flex-row sm:space-y-0"
       >
         <span className="font-medium">goggles.gogs</span>
+        <span className="font-medium">{new Date().toDateString()}</span>
       </button>
       <div className={cn(isOpen ? 'visible' : 'hidden')}>
-        <figure className="prose prose-neutral dark:prose-invert py-8 text-sm">
+        <figure className="prose prose-neutral mt-6 text-sm dark:prose-invert">
           <blockquote>
             "Any application that can be written in JavaScript, will eventually
             be written in JavaScript."
           </blockquote>
-          <figcaption className="mt-6 flex items-center gap-x-4">
+          <figcaption className="mt-4 flex items-center gap-x-4">
             <p className="font-semibold">
               <strong>Jeff Atwood</strong>
             </p>{' '}
             •<cite>co-founder of Stack Overflow</cite>
           </figcaption>
         </figure>
-        <p>
-          p/s: here are some old versions of my portfolio. not garuanteed if the
-          site will function correctly tho <br />
-          <a href="/v1">version 1</a> <a href="/v2">version 2</a>
-        </p>
       </div>
+      <p className="mt-4 border-t border-neutral-400 py-4 dark:border-neutral-600">
+        p/s: here are some old versions of my portfolio. not garuanteed if the
+        site will function correctly. <br />
+        <Link
+          className="font-medium underline decoration-neutral-400 decoration-[0.1em] underline-offset-2 dark:decoration-neutral-600"
+          to="/v1"
+        >
+          version 1
+        </Link>{' '}
+        <Link
+          className="font-medium underline decoration-neutral-400 decoration-[0.1em] underline-offset-2 dark:decoration-neutral-600"
+          to="/v2"
+        >
+          version 2
+        </Link>
+      </p>
     </footer>
   );
 }
