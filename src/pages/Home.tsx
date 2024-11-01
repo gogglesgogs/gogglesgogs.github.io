@@ -81,7 +81,7 @@ function Home() {
               <p className="mt-3">javascript library</p>
 
               <p className="mt-3 text-neutral-700 dark:text-neutral-300">
-                a javascript library for web and native user interfaces.
+                a javascript library for building web and native user interfaces based on components.
               </p>
             </li>
             <li className='mb-6 font-medium before:pr-2 before:text-sm before:content-["●"]'>
@@ -109,8 +109,8 @@ function Home() {
               <p className="mt-3">javascript runtime environment</p>
 
               <p className="mt-3 text-neutral-700 dark:text-neutral-300">
-                a free, open-source, cross-platform javascript runtime
-                environment.
+                an open-source, cross-platform javascript runtime
+                environment built on top of v8 javascript engine.
               </p>
             </li>
           </ul>
