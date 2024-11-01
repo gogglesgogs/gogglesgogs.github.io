@@ -72,22 +72,6 @@ function Home() {
           <ul>
             <li className='mb-6 font-medium before:pr-2 before:text-sm before:content-["●"]'>
               <Link
-                to="https://developer.mozilla.org/en-US/docs/Web"
-                target="_blank"
-                className="font-medium underline decoration-neutral-400 decoration-[0.1em] underline-offset-2 dark:decoration-neutral-600"
-              >
-                html / css / js
-              </Link>
-              <p className="mt-3">programming languages</p>
-
-              <p className="mt-3 text-neutral-700 dark:text-neutral-300">
-                hypertext markup language (.html) <br />
-                cascading style sheets (.css) <br />
-                javascript (.js) / javascript react (.jsx)
-              </p>
-            </li>
-            <li className='mb-6 font-medium before:pr-2 before:text-sm before:content-["●"]'>
-              <Link
                 to="https://react.dev/"
                 target="_blank"
                 className="font-medium underline decoration-neutral-400 decoration-[0.1em] underline-offset-2 dark:decoration-neutral-600"
@@ -97,7 +81,21 @@ function Home() {
               <p className="mt-3">javascript library</p>
 
               <p className="mt-3 text-neutral-700 dark:text-neutral-300">
-                a javascript library for web and native user interfaces
+                a javascript library for building web and native user interfaces based on components.
+              </p>
+            </li>
+            <li className='mb-6 font-medium before:pr-2 before:text-sm before:content-["●"]'>
+              <Link
+                to="https://tailwindcss.com"
+                target="_blank"
+                className="font-medium underline decoration-neutral-400 decoration-[0.1em] underline-offset-2 dark:decoration-neutral-600"
+              >
+                tailwind
+              </Link>
+              <p className="mt-3">css framework</p>
+
+              <p className="mt-3 text-neutral-700 dark:text-neutral-300">
+                a utility-first css framework packed with classes that can be composed to build any design.
               </p>
             </li>
             <li className='mb-6 font-medium before:pr-2 before:text-sm before:content-["●"]'>
@@ -111,8 +109,8 @@ function Home() {
               <p className="mt-3">javascript runtime environment</p>
 
               <p className="mt-3 text-neutral-700 dark:text-neutral-300">
-                a free, open-source, cross-platform javascript runtime
-                environment
+                a cross-platform, open-source javascript runtime
+                environment built on top of v8 javascript engine.
               </p>
             </li>
           </ul>
@@ -130,7 +128,7 @@ function Home() {
               </Link>
               <p className="mt-3">creator and maintainer</p>
               <p className="mt-3 text-neutral-700 dark:text-neutral-300">
-                a simple todo app that records your tasks
+                a simple todo app that records your tasks.
               </p>
             </li>
             <li className="mb-6 font-medium">
@@ -144,7 +142,7 @@ function Home() {
               <p className="mt-3">creator and maintainer</p>
               <p className="mt-3 text-neutral-700 dark:text-neutral-300">
                 a tech company web app that utilizes react, tailwindcss, and
-                other frameworks
+                other frameworks.
               </p>
             </li>
             <li className="mb-6 font-medium">
@@ -158,7 +156,7 @@ function Home() {
               <p className="mt-3">founder</p>
               <p className="mt-3 text-neutral-700 dark:text-neutral-300">
                 {/*todo just a place where i put my web app under*/}a imaginary,
-                individual-driven tech company managed by me
+                individual-driven tech company managed by me.
               </p>
             </li>
             <li className="mb-6 font-medium">

@@ -34,8 +34,7 @@ function Footer() {
         </figure>
       </div>
       <p className="mt-4 border-t border-neutral-400 py-4 dark:border-neutral-600">
-        p/s: here are some old versions of my portfolio. not garuanteed if the
-        site will function correctly. <br />
+        p/s: here are the older versions of this website. note that it may not work as well as the current one. <br />
         <Link
           className="font-medium underline decoration-neutral-400 decoration-[0.1em] underline-offset-2 dark:decoration-neutral-600"
           to="/v1"
