@@ -109,7 +109,7 @@ function Home() {
               <p className="mt-3">javascript runtime environment</p>
 
               <p className="mt-3 text-neutral-700 dark:text-neutral-300">
-                an open-source, cross-platform javascript runtime
+                a cross-platform, open-source javascript runtime
                 environment built on top of v8 javascript engine.
               </p>
             </li>
