@@ -10,6 +10,9 @@ export default {
       fontFamily: {
         sans: ['InterVariable', ...defaultTheme.fontFamily.sans],
       },
+      transformOrigin: {
+        'center-bottom': 'center bottom',
+      },
     },
   },
   plugins: [typography],

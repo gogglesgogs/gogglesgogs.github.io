@@ -12,8 +12,8 @@ export default defineConfig({
           tailwind: ['tailwind-merge', 'clsx'],
           animation: ['framer-motion'],
         },
-        compact: true
-      }
-    }
+        compact: true,
+      },
+    },
   },
 });
