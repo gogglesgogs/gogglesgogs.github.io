@@ -8,8 +8,13 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: {
-          react: ['react', 'react-dom', 'react-router-dom'],
-          tailwind: ['tailwind-merge', 'clsx'],
+          react: ['react', 'react-dom'],
+          libs: [
+            'react-router-dom',
+            '/src/utils/cn.ts',
+            'tailwind-merge',
+            'clsx',
+          ],
           animation: ['framer-motion'],
         },
         compact: true,
