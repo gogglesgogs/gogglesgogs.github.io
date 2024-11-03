@@ -77,7 +77,7 @@ _/blogs_
     <form>{email} subscribe</form>
   </div>
   <ul>
-    <li>[title](link) {desc} {date} + {views}</li>
+    <li>[title](link) {desc} {date}</li>
   </ul>
 </main>
 ```
@@ -85,5 +85,5 @@ _/blogs_
 _/blogs/:id_
 
 ```html
-<main>{title} {date} + {views} ... content ...</main>
+<main>{title} {date} ... content ...</main>
 ```

@@ -105,12 +105,12 @@ function Home() {
           className="text-left"
           variants={{ visible: { transition: { staggerChildren: 0.05 } } }}
         >
-          <motion.h3
+          <motion.h2
             className="mb-8 text-xl font-medium"
             variants={elementVariants}
           >
             skills
-          </motion.h3>
+          </motion.h2>
           <ul>
             <motion.li className="mb-6 font-medium" variants={elementVariants}>
               <Link
@@ -163,12 +163,12 @@ function Home() {
           className="text-left"
           variants={{ visible: { transition: { staggerChildren: 0.05 } } }}
         >
-          <motion.h3
+          <motion.h2
             className="mb-8 text-xl font-medium"
             variants={elementVariants}
           >
             projects
-          </motion.h3>
+          </motion.h2>
           <ul>
             <motion.li className="mb-6 font-medium" variants={elementVariants}>
               <Link
@@ -230,48 +230,13 @@ function Home() {
         blog
       </motion.h3>
       <motion.ul className="flex flex-col gap-6">
+        {/* todo add blog posts */}
         <motion.li variants={elementVariants}>
           <Link className="" to="/blog">
             <div className="flex w-full justify-between">
               <p className="font-medium underline decoration-neutral-400 decoration-[0.1em] underline-offset-2 dark:decoration-neutral-600">
                 vivamus elementum gravida lectus, et posuere ligula tincidunt
                 eu.
-              </p>
-              <p className="text-sm text-neutral-600 dark:text-neutral-400">
-                {new Date().toDateString().toLowerCase()}
-              </p>
-            </div>
-          </Link>
-        </motion.li>
-        <motion.li variants={elementVariants}>
-          <Link className="" to="/blog">
-            <div className="flex w-full justify-between">
-              <p className="font-medium underline decoration-neutral-400 decoration-[0.1em] underline-offset-2 dark:decoration-neutral-600">
-                donec ac risus congue, condimentum ante nec, efficitur ipsum.
-              </p>
-              <p className="text-sm text-neutral-600 dark:text-neutral-400">
-                {new Date().toDateString().toLowerCase()}
-              </p>
-            </div>
-          </Link>
-        </motion.li>
-        <motion.li variants={elementVariants}>
-          <Link className="" to="/blog">
-            <div className="flex w-full justify-between">
-              <p className="font-medium underline decoration-neutral-400 decoration-[0.1em] underline-offset-2 dark:decoration-neutral-600">
-                cras ornare felis justo, nec sollicitudin felis ultrices vel.
-              </p>
-              <p className="text-sm text-neutral-600 dark:text-neutral-400">
-                {new Date().toDateString().toLowerCase()}
-              </p>
-            </div>
-          </Link>
-        </motion.li>
-        <motion.li variants={elementVariants}>
-          <Link className="" to="/blog">
-            <div className="flex w-full justify-between">
-              <p className="font-medium underline decoration-neutral-400 decoration-[0.1em] underline-offset-2 dark:decoration-neutral-600">
-                phasellus volutpat dapibus lorem, ac molestie lectus commodo et.
               </p>
               <p className="text-sm text-neutral-600 dark:text-neutral-400">
                 {new Date().toDateString().toLowerCase()}
