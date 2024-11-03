@@ -19,7 +19,12 @@ function App() {
 
   const location = useLocation();
 
-  if (!element) return <div className="w-full text-center">Error!</div>;
+  if (!element)
+    return (
+      <div className="prose prose-neutral w-full text-center dark:prose-invert">
+        oops! an unexpected error has occurred.
+      </div>
+    );
 
   return (
     <Suspense fallback={<div className="h-screen w-full text-center"></div>}>
