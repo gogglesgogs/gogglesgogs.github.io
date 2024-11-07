@@ -22,7 +22,6 @@ export default defineConfig({
           libs: [
             'react-router-dom',
             '/src/utils/cn.ts',
-            '/src/utils/discordLink.ts',
             'tailwind-merge',
             'clsx',
           ],
