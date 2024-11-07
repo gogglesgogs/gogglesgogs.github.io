@@ -27,6 +27,12 @@ export default defineConfig({
           ],
           animation: ['framer-motion'],
           content: ['/content.config.ts'],
+          blogs: [
+            '/src/pages/blogs/claude.mdx',
+            '/src/pages/blogs/finished-portfolio.mdx',
+            '/src/pages/blogs/quik-vs-solid.mdx',
+            '/src/pages/blogs/tech-trend-2024.mdx',
+          ],
         },
         compact: true,
       },
