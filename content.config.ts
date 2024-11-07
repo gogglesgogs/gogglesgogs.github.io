@@ -1,16 +1,18 @@
 import type Content from './types/content.config';
 
-//! this file is used for the content of the website
-export default {
+//* this file is used for the content of the website
+const Content: Content = {
   name: 'goggles.gogs',
+  hover_name: 'nguyen khoa',
   addr: 'hung yen, vietnam',
   job: 'high school student @ Greenfield School',
   bio: "i'm a 16 y/o teenager whos good at problem solving and interested in computer science. currently learning web development to pursue my career.",
-  github: 'https://github.com/gogglesgogs',
-  email: 'ngkhoa0075@gmail.com',
-  //todo add logic to implement discord id links
-  discord: '799597159661699112',
-  kofi: 'https://ko-fi.com/gogglesgogs',
+  links: {
+    email: 'mailto:ngkhoa0075@gmail.com',
+    discord: 'https://discordapp.com/users/799597159661699112',
+    'support me': 'https://ko-fi.com/gogglesgogs',
+    github: 'https://github.com/gogglesgogs',
+  },
   skills: [
     {
       mainHeading: 'react',
@@ -55,10 +57,38 @@ export default {
       link: 'https://github.com/gogglesinc',
     },
   ],
+  blogs: {
+    'quik-vs-solid': {
+      title: 'Quik vs SolidJS: Which one is better?',
+      date: '10 Jul, 2024',
+      author: 'Goggles',
+      desc: "Quik's fast-loading, minimal-JS approach and SolidJS's high-performance, reactive design. Who's gonna win?",
+    },
+    claude: {
+      title: 'The new Claude 3.5 Sonnet is here!',
+      date: '25 Jun, 2024',
+      author: 'Goggles',
+      desc: 'Discover Claude 3.5, an AI thats packed with new features and capabilities.',
+    },
+    'tech-trend-2024': {
+      title: 'The Hottest Tech Trends Right Now! 🔥',
+      date: '20 Mar, 2024',
+      author: 'Goggles',
+      desc: 'The current tech landscape with the rapid rise of AI, Web3, serverless architectures, and cybersecurity.',
+    },
+    'finished-portfolio': {
+      title: "I Finished My Portfolio! 🚀 Here's What I Used",
+      date: '10 Sep, 2023',
+      author: 'Goggles',
+      desc: 'My journey of creating my portfolio website and what I used in the process.',
+    },
+  },
   footer: {
     quote:
       '"Any application that can be written in JavaScript, will eventually be written in JavaScript."',
     author: 'Jeff Atwood',
     title: 'co-founder of Stack Overflow',
   },
-} satisfies Content;
+};
+
+export default Content;

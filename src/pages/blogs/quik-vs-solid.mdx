@@ -1,0 +1,61 @@
+If you're into the tech world or just starting to dive into web development, you've probably heard about some of the cool new front-end frameworks popping up. Two of the most talked-about ones right now are **Quik** and **SolidJS**. Both of these frameworks are super interesting, but they're different in some big ways. In this post, I'll break down what each of them is, and how they compare so you can figure out which one might be a good fit for your next project.
+
+## Quik?
+
+Quik is a super new framework designed to be as fast as possible by focusing on **speed** and **performance**. One of its coolest features is something called "HTML streaming," which basically means it loads as much of your site as possible without needing to wait for the JavaScript to run first. Imagine that—your page loads really quickly, and it's ready to interact with even before the whole thing is fully loaded. It's like the web page gives you a sneak peek of what's coming!
+
+Quik uses **islands architecture**, which means only parts of your page that need interactivity are actually "hydrated" with JavaScript. The rest of the page stays static, so the initial load is crazy fast. This is a major win for performance, especially on slower networks or devices. 🚀
+
+## SolidJS?
+
+SolidJS is another performance-focused framework, but it takes a slightly different approach. Unlike React, which is based on a virtual DOM (which makes it fast, but not the fastest), **SolidJS** goes straight to the real DOM and updates it directly when changes happen. It's known for being super fast because it doesn't do a lot of the work that React does behind the scenes (like diffing the virtual DOM).
+
+SolidJS has a pretty simple API, and even though it might feel a bit more "hands-on" compared to something like React, it's pretty straightforward once you get the hang of it. It's also **reactive**, meaning the UI updates automatically when the state changes, which makes it really easy to build interactive apps without a lot of hassle.
+
+## Quik vs SolidJS
+
+So how do they stack up against each other? Let's break it down:
+
+### 1. **Performance**
+
+- **Quik**: Focuses a lot on **load performance**. It's designed to load faster by splitting the page into smaller parts and only loading JavaScript for interactive elements. This can make it awesome for really large websites.
+- **SolidJS**: Focuses on **runtime performance**. It updates the DOM directly and doesn't use a virtual DOM, which makes it super fast when you're interacting with the page. It's like a speed demon for dynamic content!
+
+|    name     |     TTI     |     FCP     |     LCP     |   Score   |
+| :---------: | :---------: | :---------: | :---------: | :-------: |
+|    astro    |    0.6 s    |    0.6 s    |    0.6 s    |    100    |
+| **_Qwik_**  | **_0.7 s_** | **_0.7 s_** | **_1.2 s_** | **_100_** |
+|    react    |    0.8 s    |    0.8 s    |    2.2 s    |    99     |
+|    fresh    |    0.8 s    |    0.8 s    |    0.9 s    |    100    |
+|     lit     |    0.8 s    |    0.8 s    |    1.1 s    |    100    |
+| **_Solid_** | **_1.0 s_** | **_0.7 s_** | **_1.3 s_** | **_86_**  |
+|    marko    |    1.1 s    |    0.8 s    |    0.9 s    |    100    |
+|     ...     |     ...     |     ...     |     ...     |    ...    |
+
+Benchmark data by BuilderIO. [Source](https://github.com/BuilderIO/framework-benchmarks?tab=readme-ov-file#todo-app)
+
+### 2. **Use Cases**
+
+- **Quik**: Because of its focus on loading speed, Quik might be the best choice for projects that need to be **super fast from the get-go**—like blogs, landing pages, or anything with a lot of static content that needs to load quickly.
+- **SolidJS**: Solid is great for **dynamic applications** that need to update frequently without lag. Think things like dashboards, real-time applications, or interactive sites where the user will be engaging with a lot of features.
+
+### 3. **Developer Experience**
+
+- **Quik**: Quik's architecture is a bit newer and might require you to think a little differently about how you build your site. But once you get the hang of it, it can feel pretty smooth. Plus, the speed is totally worth it.
+- **SolidJS**: Solid feels a lot like React, but without all the extra overhead. If you've worked with React before, Solid will feel super familiar. It's a little lower level, so you get more control, but it's still easy to use once you get used to it.
+
+### 4. **Ecosystem & Community**
+
+- **Quik**: Since Quik is still really new, its community and ecosystem aren't as big as some of the older frameworks like React or Vue. But it's growing quickly, and there's a lot of excitement around it.
+- **SolidJS**: Solid has been around for a little longer and has a **smaller but super passionate** community. The ecosystem is growing, but it's still not as big as React's. If you're okay with a smaller community, you'll probably find it a lot of fun to work with.
+
+## Final Thoughts: Which One Should You Pick?
+
+At the end of the day, it depends on your project.
+
+- If you're working on something that **needs to load insanely fast** and you want to minimize JavaScript as much as possible, **Quik** might be the way to go.
+- If you need something that's **really reactive** and gives you full control over updates without sacrificing speed, **SolidJS** is probably your best bet.
+
+Either way, both of these frameworks are awesome and show just how fast and modern web development is getting! 🖥️
+
+Hope this helps you decide which one to explore first. Let me know which framework you think looks more exciting!

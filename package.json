@@ -1,7 +1,13 @@
 {
-  "name": "test",
+  "name": "goggles-portfolio",
   "private": true,
   "version": "0.0.0",
+  "description": "goggles portfolio source code",
+  "license": "MIT",
+  "author": {
+    "name": "Goggles",
+    "url": "https://goggles.pages.dev/"
+  },
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -15,16 +21,20 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.27.0",
+    "remark-gfm": "^4.0.0",
     "tailwind-merge": "^2.5.4"
   },
   "devDependencies": {
     "@eslint/js": "^9.13.0",
+    "@mdx-js/rollup": "^3.1.0",
     "@tailwindcss/typography": "^0.5.15",
+    "@types/mdx": "^2.0.13",
     "@types/react": "^18.3.11",
     "@types/react-dom": "^18.3.1",
     "@vitejs/plugin-react": "^4.3.3",
     "autoprefixer": "^10.4.20",
     "eslint": "^9.13.0",
+    "eslint-plugin-mdx": "^3.1.5",
     "eslint-plugin-react": "^7.37.2",
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.13",

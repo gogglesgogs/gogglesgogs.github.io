@@ -22,9 +22,36 @@ interface item {
    *
    * Pass ```null``` to remove the link.
    *
-   * @type {(string | null)}
+   * @type {string | null}
    */
   link: string | null;
+}
+
+interface blogItems {
+  /**
+   * Title of the blog.
+   *
+   * @type {string}
+   */
+  title: string;
+  /**
+   * Published date of the blog.
+   *
+   * @type {string}
+   */
+  date: string;
+  /**
+   * Author of the blog.
+   *
+   * @type {string}
+   */
+  author: string;
+  /**
+   * A short description of the blog.
+   *
+   * @type {string}
+   */
+  desc: string;
 }
 
 interface footer {
@@ -58,59 +85,40 @@ declare interface Content {
    * Your name.
    *
    * @type {string}
-   * @default 'name'
    */
   name: string;
+  /**
+   * Another name or nickname that will be displayed when hovering the name element.
+   *
+   * You can pass ```null``` to remove the hover name.
+   *
+   * @type {string | null}
+   */
+  hover_name: string | null;
   /**
    * Your address.
    *
    * @type {string}
-   * @default 'location'
    */
   addr: string;
   /**
    * Your job title.
    *
    * @type {string}
-   * @default 'job'
    */
   job: string;
   /**
    * A short bio about you.
    *
    * @type {string}
-   * @default 'This is my portfolio website.'
    */
   bio: string;
   /**
-   * Your GitHub profile link.
+   * An object of your links.
    *
-   * @type {string}
-   * @default 'https://github.com/gogglesgogs'
+   * @type {{ [key: string]: string }}
    */
-  github: string;
-  /**
-   * Your email address.
-   *
-   * @type {string}
-   * @default 'email@example.com'
-   */
-  email: string;
-  /**
-   * Your Discord User ID.
-   * {@link https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID Get your User ID here}
-   *
-   * @type {string}
-   * @default '799597159661699112'
-   */
-  discord: string;
-  /**
-   * Your Kofi link.
-   *
-   * @type {string}
-   * @default 'https://ko-fi.com/gogglesgogs'
-   */
-  kofi: string;
+  links: { [key: string]: string };
   /**
    * An array of your skills.
    *
@@ -124,11 +132,17 @@ declare interface Content {
    */
   projects: item[];
   /**
+   * An object of your blogs.
+   *
+   * @type {{ [key: string]: blogItems }}
+   */
+  blogs: { [key: string]: blogItems };
+  /**
    * The subfooter easter egg where you can put a famous quote that you like.
    *
    * You can pass the value ```null``` to remove it.
    *
-   * @type {footer}
+   * @type {footer | null}
    */
   footer: footer | null;
 }
