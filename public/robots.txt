@@ -1,2 +1,3 @@
 User-agent: *
-Allow: /
+Disallow: /v1/
+Disallow: /v2/

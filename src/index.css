@@ -3,5 +3,32 @@
 @tailwind utilities;
 
 ::selection {
-  @apply bg-[#ffffff80];
+  /* @apply bg-[#ffffff80]; */
+  @apply bg-neutral-500/50;
+}
+
+::-webkit-scrollbar {
+  @apply w-1.5;
+}
+
+::-webkit-scrollbar-button,
+::-webkit-scrollbar-corner {
+  @apply hidden;
+}
+
+::-webkit-scrollbar-button,
+::-webkit-scrollbar-corner {
+  @apply hidden;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply rounded-full bg-neutral-500/50;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-neutral-400/50;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
 }
