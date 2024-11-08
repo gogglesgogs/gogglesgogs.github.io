@@ -36,13 +36,13 @@ function Footer() {
         work as well as the current one. <br />
         <a
           className="font-medium underline decoration-neutral-400 decoration-[0.1em] underline-offset-2 dark:decoration-neutral-600"
-          href="/v1/index.html"
+          href="https://gogglesgogs.github.io/v1"
         >
           version 1
         </a>{' '}
         <a
           className="font-medium underline decoration-neutral-400 decoration-[0.1em] underline-offset-2 dark:decoration-neutral-600"
-          href="/v2/index.html"
+          href="https://gogglesgogs.github.io/v2"
         >
           version 2
         </a>
