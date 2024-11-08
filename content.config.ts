@@ -58,6 +58,12 @@ const Content: Content = {
     },
   ],
   blogs: {
+    'finished-portfolio': {
+      title: "I Finally Finished My Portfolio! 🚀 Here's What I Used",
+      date: '7 Nov, 2024',
+      author: 'Goggles',
+      desc: 'My journey of creating my portfolio website and what I used in the process.',
+    },
     'quik-vs-solid': {
       title: 'Quik vs SolidJS: Which one is better?',
       date: '10 Jul, 2024',
@@ -75,12 +81,6 @@ const Content: Content = {
       date: '20 Mar, 2024',
       author: 'Goggles',
       desc: 'The current tech landscape with the rapid rise of AI, Web3, serverless architectures, and cybersecurity.',
-    },
-    'finished-portfolio': {
-      title: "I Finished My Portfolio! 🚀 Here's What I Used",
-      date: '10 Sep, 2023',
-      author: 'Goggles',
-      desc: 'My journey of creating my portfolio website and what I used in the process.',
     },
   },
   footer: {
