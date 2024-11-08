@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Suspense, lazy } from 'react';
+import { Suspense, lazy, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Content from '../../content.config';
 
@@ -15,7 +15,7 @@ const elementVariants = {
   hidden,
 };
 
-function Claude() {
+function Claude() { 
   const { blogId } = useParams();
 
   if (!blogId) return (window.location.href = '/blog');
@@ -38,6 +38,10 @@ function Claude() {
     }
   };
 
+  useEffect(() => {
+    document.title = `${blogData.title} - Goggles Gogs`;
+  }, []);
+  
   return (
     <motion.section
       initial="hidden"
