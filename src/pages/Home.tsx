@@ -15,11 +15,11 @@ function Home() {
 
   const handleMouseEnter = () => {
     if (!Content.hover_name) return;
-    setHover(true);
+    setHover(!isHovered);
   };
 
   const handleMouseLeave = () => {
-    setHover(false);
+    setHover(!isHovered);
   };
 
   useEffect(() => {
@@ -39,7 +39,10 @@ function Home() {
         variants={{ hidden, visible }}
       >
         <motion.span
+          tabIndex={0}
           className="absolute inset-y-0 left-0 z-10"
+          onFocus={handleMouseLeave}
+          onBlur={handleMouseEnter}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
           animate={isHovered ? { opacity: 0 } : {}}
