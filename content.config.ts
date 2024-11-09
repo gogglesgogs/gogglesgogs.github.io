@@ -53,7 +53,7 @@ const Content: Content = {
     {
       mainHeading: 'gogglesinc/',
       secondHeading: 'founder',
-      description: 'a imaginary, individual-driven tech company managed by me.',
+      description: 'a imaginary, individually owned tech company by me.',
       link: 'https://github.com/gogglesinc',
     },
   ],
