@@ -2,6 +2,9 @@ import { useLocation, useRoutes } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import { cloneElement, lazy, Suspense } from 'react';
 
+const Terminal = lazy(() => import('./pages/Terminal.tsx'));
+const Nav = lazy(() => import('./components/Nav.tsx'));
+const Footer = lazy(() => import('./components/Footer.tsx'));
 const Home = lazy(() => import('./pages/Home.tsx'));
 const Blog = lazy(() => import('./pages/Blog.tsx'));
 const BlogLoader = lazy(() => import('./pages/BlogLoader.tsx'));
@@ -20,6 +23,10 @@ function App() {
       path: '/blog/:blogId',
       element: <BlogLoader />,
     },
+    {
+      path: '/terminal',
+      element: <Terminal />,
+    },
   ]);
 
   const location = useLocation();
@@ -32,10 +39,18 @@ function App() {
     );
 
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense
+      fallback={
+        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+          Loading...
+        </div>
+      }
+    >
+      {location.pathname !== '/terminal' && <Nav />}
       <AnimatePresence mode="wait">
         {cloneElement(element, { key: location.pathname })}
       </AnimatePresence>
+      {location.pathname !== '/terminal' && <Footer />}
     </Suspense>
   );
 }
