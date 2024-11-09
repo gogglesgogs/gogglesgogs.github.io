@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from 'react';
-import TerminalHostname from '../components/TerminalHostname';
+import Hostname from '../components/Hostname';
 import { motion } from 'framer-motion';
 import { commands } from '../utils/commands';
 
@@ -14,7 +14,7 @@ const hidden = { opacity: 0, transition: { duration: 0.5 } };
 const HistoryItem = ({ command, result }: HistoryItem): JSX.Element => (
   <>
     <div className="flex flex-col md:flex-row">
-      <TerminalHostname />
+      <Hostname />
       <div className="flex">
         <p className="visible md:hidden">❯</p>
         <p className="px-2">{command}</p>
@@ -81,7 +81,7 @@ function Terminal() {
     >
       <div>{historyItems}</div>
       <div className="flex flex-col md:flex-row">
-        <TerminalHostname />
+        <Hostname />
         <div className="flex">
           <p className="visible md:hidden">❯</p>
           <input

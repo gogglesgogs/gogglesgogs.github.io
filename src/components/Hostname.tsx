@@ -1,4 +1,4 @@
-function TerminalHostname() {
+function Hostname() {
   return (
     <h1 className="flex font-bold">
       <span>guest</span>
@@ -9,4 +9,4 @@ function TerminalHostname() {
   );
 }
 
-export default TerminalHostname;
+export default Hostname;
