@@ -76,7 +76,7 @@ interface footer {
 }
 
 /**
- * Types for the content.config.ts file.
+ * The content of the website.
  * This will help you with itellisense and type checking.
  * @interface Content
  */
@@ -116,9 +116,9 @@ declare interface Content {
   /**
    * An object of your links.
    *
-   * @type {{ [key: string]: string }}
+   * @type {Record<string, string>}
    */
-  links: { [key: string]: string };
+  links: Record<string, string>;
   /**
    * An array of your skills.
    *
@@ -134,9 +134,15 @@ declare interface Content {
   /**
    * An object of your blogs.
    *
-   * @type {{ [key: string]: blogItems }}
+   * @type {Record<string, blogItems>}
    */
-  blogs: { [key: string]: blogItems };
+  blogs: Record<string, blogItems>;
+  /**
+   * An object of your commands.
+   *
+   * @type {Record<string, (args: string[]) => string>}
+   */
+  commands: Record<string, (args?: string[]) => string>;
   /**
    * The subfooter easter egg where you can put a famous quote that you like.
    *

@@ -15,7 +15,7 @@ const elementVariants = {
   hidden,
 };
 
-function Claude() { 
+function Claude() {
   const { blogId } = useParams();
 
   if (!blogId) return (window.location.href = '/blog');
@@ -41,7 +41,7 @@ function Claude() {
   useEffect(() => {
     document.title = `${blogData.title} - Goggles Gogs`;
   }, []);
-  
+
   return (
     <motion.section
       initial="hidden"

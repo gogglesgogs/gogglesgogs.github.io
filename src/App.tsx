@@ -46,11 +46,11 @@ function App() {
         </div>
       }
     >
-      {location.pathname !== '/terminal' && <Nav />}
+      <Nav />
       <AnimatePresence mode="wait">
         {cloneElement(element, { key: location.pathname })}
       </AnimatePresence>
-      {location.pathname !== '/terminal' && <Footer />}
+      <Footer />
     </Suspense>
   );
 }
