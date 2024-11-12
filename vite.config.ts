@@ -24,6 +24,7 @@ export default defineConfig({
             '/src/utils/cn.ts',
             'tailwind-merge',
             'clsx',
+            'plausible-tracker',
           ],
           animation: ['framer-motion'],
           content: ['/content.config.ts'],
