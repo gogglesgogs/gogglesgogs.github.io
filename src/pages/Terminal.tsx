@@ -1,5 +1,6 @@
 import { useEffect, useState, useRef } from 'react';
 import { motion } from 'framer-motion';
+import Plausible from 'plausible-tracker';
 import Hostname from '../components/Hostname';
 import Content from '../../content.config';
 
@@ -10,6 +11,9 @@ type HistoryItem = {
 
 const visible = { opacity: 1, transition: { duration: 0.5 } };
 const hidden = { opacity: 0, transition: { duration: 0.5 } };
+const { trackEvent } = Plausible({
+  domain: 'goggles.pages.dev',
+});
 
 const HistoryItem = ({ command, result }: HistoryItem): JSX.Element => (
   <>
@@ -46,12 +50,22 @@ function Terminal() {
           });
           break;
         case 'clear':
+          trackEvent('Command Input', {
+            props: {
+              commands_used: 'clear',
+            },
+          });
           setHistory(() => {
             saveHistory([]);
             return [];
           });
           break;
         default:
+          trackEvent('Command Input', {
+            props: {
+              commands_used: command,
+            },
+          });
           let result = '';
           let [commandName, ...args] = command.split(' ');
           commandName = commandName.toLowerCase();
