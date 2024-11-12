@@ -54,14 +54,14 @@ function Nav() {
               >
                 <path
                   d="M114 22H14V106H114V22Z"
-                  stroke="currentColor"
+                  stroke="white"
                   strokeWidth="10"
                   strokeLinecap="round"
                   strokeLinejoin="round"
                 />
                 <path
                   d="M70 82H90M38 46L58 64L38 82"
-                  stroke="currentColor"
+                  stroke="white"
                   strokeWidth="10"
                   strokeLinecap="round"
                   strokeLinejoin="round"

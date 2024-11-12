@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from 'react';
-import Hostname from '../components/Hostname';
 import { motion } from 'framer-motion';
-import { commands } from '../utils/commands';
+import Hostname from '../components/Hostname';
+import Content from '../../content.config';
 
 type HistoryItem = {
   command: string;
@@ -24,43 +24,65 @@ const HistoryItem = ({ command, result }: HistoryItem): JSX.Element => (
   </>
 );
 
-function saveHistory(saveItems: { command: string; result: string }[]) {
+const saveHistory = (saveItems: { command: string; result: string }[]) => {
   localStorage.setItem('history', JSON.stringify(saveItems));
-}
+};
 
 function Terminal() {
-  const [history, setHistory] = useState<{ command: string; result: string }[]>(
-    () => {
-      localStorage.getItem('history');
-      return JSON.parse(localStorage.getItem('history') || '[]');
-    },
-  );
+  const [history, setHistory] = useState<HistoryItem[]>(() => {
+    return JSON.parse(localStorage.getItem('history') || '[]');
+  });
   const [command, setCommand] = useState<string>('');
   const inputRef = useRef<HTMLInputElement>(null);
 
   const handleEnter = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter') {
-      if (command === '') {
-        setHistory((prevItems) => [...prevItems, { command: '', result: '' }]);
-        saveHistory([...history, { command: '', result: '' }]);
-        setCommand('');
-        return;
+      switch (command) {
+        case '':
+          setHistory((prevItems) => {
+            const newHistory = [...prevItems, { command: '', result: '' }];
+            saveHistory(newHistory);
+            return newHistory;
+          });
+          break;
+        case 'clear':
+          setHistory(() => {
+            saveHistory([]);
+            return [];
+          });
+          break;
+        default:
+          let result = '';
+          let [commandName, ...args] = command.split(' ');
+          commandName = commandName.toLowerCase();
+          const commandFunc = Content.commands[commandName];
+          if (commandFunc) {
+            result = commandFunc(args);
+          } else {
+            result = `${command}: command not found`;
+          }
+          setHistory((prevItems) => {
+            const newHistory = [...prevItems, { command, result }];
+            saveHistory(newHistory);
+            return newHistory;
+          });
+          break;
       }
-      let result = '';
-      const commandFunc = commands[command];
-      if (commandFunc) {
-        result = commandFunc();
-      } else {
-        result = `${command}: command not found`;
-      }
-      setHistory((prevItems) => [...prevItems, { command, result }]);
-      saveHistory([...history, { command: '', result: '' }]);
       setCommand('');
     }
   };
 
   useEffect(() => {
     if (inputRef.current) inputRef.current.focus();
+    if (history.length == 0) {
+      const bannerFunc = Content.commands['banner'];
+      if (bannerFunc) {
+        setHistory((prevItems) => [
+          ...prevItems,
+          { command: 'banner', result: bannerFunc() },
+        ]);
+      }
+    }
   }, []);
 
   return (

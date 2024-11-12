@@ -83,6 +83,39 @@ const Content: Content = {
       desc: 'The current tech landscape with the rapid rise of AI, Web3, serverless architectures, and cybersecurity.',
     },
   },
+  commands: {
+    help: () =>
+      'Available commands: ' + Object.keys(Content.commands).join(', '),
+    hostname: () => window.location.hostname,
+    whoami: () => 'guest',
+    author: () => Content.name,
+    date: () => new Date().toLocaleDateString(),
+    time: () => new Date().toLocaleTimeString(),
+    echo: (args) => {
+      if (!args) return 'No echo string provided';
+      return args.join(' ');
+    },
+    github: () => {
+      window.open(Content.links.github, '_blank');
+      return 'Redirecting...';
+    },
+    email: () => {
+      window.open(Content.links.email, '_blank');
+      return 'Redirecting...';
+    },
+    donate: () => {
+      window.open(Content.links['support me'], '_blank');
+      return 'Redirecting...';
+    },
+    banner: () => `
+ ██████╗   ██████╗   ██████╗   ██████╗  ██╗      ███████╗ ███████╗ 
+██╔════╝  ██╔═══██╗ ██╔════╝  ██╔════╝  ██║      ██╔════╝ ██╔════╝ 
+██║  ███╗ ██║   ██║ ██║  ███╗ ██║  ███╗ ██║      █████╗   ███████╗ 
+██║   ██║ ██║   ██║ ██║   ██║ ██║   ██║ ██║      ██╔══╝   ╚════██║ 
+╚██████╔╝ ╚██████╔╝ ╚██████╔╝ ╚██████╔╝ ███████╗ ███████╗ ███████║ 
+ ╚═════╝   ╚═════╝   ╚═════╝   ╚═════╝  ╚══════╝ ╚══════╝ ╚══════╝ 
+    `,
+  },
   footer: {
     quote:
       '"Any application that can be written in JavaScript, will eventually be written in JavaScript."',
