@@ -20,55 +20,47 @@ const HistoryItem = ({ command, result }: HistoryItem): JSX.Element => (
         <p className="px-2">{command}</p>
       </div>
     </div>
-    <p className="whitespace-pre">{result}</p>
+    {result ? <p className="whitespace-pre">{result}</p> : null}
   </>
 );
 
+function saveHistory(saveItems: { command: string; result: string }[]) {
+  localStorage.setItem('history', JSON.stringify(saveItems));
+}
+
 function Terminal() {
-  const [historyItems, setHistoryItems] = useState<JSX.Element[]>([]);
+  const [history, setHistory] = useState<{ command: string; result: string }[]>(
+    () => {
+      localStorage.getItem('history');
+      return JSON.parse(localStorage.getItem('history') || '[]');
+    },
+  );
   const [command, setCommand] = useState<string>('');
   const inputRef = useRef<HTMLInputElement>(null);
 
   const handleEnter = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter') {
-      setHistoryItems((prevItems): JSX.Element[] => [
-        ...prevItems,
-        <HistoryItem
-          key={Math.random()}
-          command={command}
-          // implement logic
-          result={command}
-        />,
-      ]);
+      if (command === '') {
+        setHistory((prevItems) => [...prevItems, { command: '', result: '' }]);
+        saveHistory([...history, { command: '', result: '' }]);
+        setCommand('');
+        return;
+      }
+      let result = '';
+      const commandFunc = commands[command];
+      if (commandFunc) {
+        result = commandFunc();
+      } else {
+        result = `${command}: command not found`;
+      }
+      setHistory((prevItems) => [...prevItems, { command, result }]);
+      saveHistory([...history, { command: '', result: '' }]);
       setCommand('');
     }
   };
 
   useEffect(() => {
-    const rootElement = document.getElementById('root')!;
-
-    const prevClassesBody = document.body.classList;
-    const prevClassesRoot = rootElement.classList;
-
-    document.body.classList.remove(...prevClassesBody);
-    rootElement.classList.remove(...prevClassesRoot);
-
-    document.body.classList.add('min-h-screen', 'font-mono', 'antialiased');
-    rootElement.classList.add('h-screen', 'p-4');
-
     if (inputRef.current) inputRef.current.focus();
-
-    return () => {
-      document.body.classList.remove(
-        'min-h-screen',
-        'font-mono',
-        'antialiased',
-      );
-      rootElement.classList.remove('h-screen', 'p-4');
-
-      document.body.classList.add(...prevClassesBody);
-      rootElement.classList.add(...prevClassesRoot);
-    };
   }, []);
 
   return (
@@ -77,12 +69,18 @@ function Terminal() {
       animate="visible"
       exit="hidden"
       variants={{ visible, hidden }}
-      className="h-full overflow-auto rounded-md border-2 border-[#404040] p-4 text-xs sm:text-sm md:text-base dark:border-[#d4d4d4]"
+      className="h-full overflow-auto rounded-md border-2 border-[#404040] p-4 font-mono text-xs sm:text-sm md:text-base dark:border-[#d4d4d4]"
     >
-      <div>{historyItems}</div>
+      <ul>
+        {history.map((item, index) => (
+          <li key={index}>
+            <HistoryItem command={item.command} result={item.result} />
+          </li>
+        ))}
+      </ul>
       <div className="flex flex-col md:flex-row">
         <Hostname />
-        <div className="flex">
+        <div className="flex flex-grow">
           <p className="visible md:hidden">❯</p>
           <input
             ref={inputRef}
