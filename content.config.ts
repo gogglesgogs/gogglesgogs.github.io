@@ -1,8 +1,16 @@
-import type Content from './types/content.config';
-import * as FinishedPortfolio from './src/pages/blogs/finished-portfolio.mdx';
-import * as QuikVSSolid from './src/pages/blogs/quik-vs-solid.mdx';
-import * as Claude from './src/pages/blogs/claude.mdx';
-import * as TechTrend2024 from './src/pages/blogs/tech-trend-2024.mdx';
+import type Content from './src/types/content.config';
+import FinishedPortfolio, {
+  metadata as FinishedPortfolioMetadata,
+} from './src/pages/blogs/finished-portfolio.mdx';
+import QuikVSSolid, {
+  metadata as QuikVSSolidMetadata,
+} from './src/pages/blogs/quik-vs-solid.mdx';
+import Claude, {
+  metadata as ClaudeMetadata,
+} from './src/pages/blogs/claude.mdx';
+import TechTrend2024, {
+  metadata as TechTrend2024Metadata,
+} from './src/pages/blogs/tech-trend-2024.mdx';
 
 //* this file is used for the content of the website
 const Content: Content = {
@@ -63,32 +71,32 @@ const Content: Content = {
   ],
   blogs: {
     'finished-portfolio': {
-      title: FinishedPortfolio.metadata.title,
-      date: FinishedPortfolio.metadata.date,
-      author: FinishedPortfolio.metadata.author,
-      desc: FinishedPortfolio.metadata.desc,
-      content: FinishedPortfolio.default,
+      title: FinishedPortfolioMetadata.title,
+      date: FinishedPortfolioMetadata.date,
+      author: FinishedPortfolioMetadata.author,
+      desc: FinishedPortfolioMetadata.desc,
+      content: FinishedPortfolio,
     },
     'quik-vs-solid': {
-      title: QuikVSSolid.metadata.title,
-      date: QuikVSSolid.metadata.date,
-      author: QuikVSSolid.metadata.author,
-      desc: QuikVSSolid.metadata.desc,
-      content: QuikVSSolid.default,
+      title: QuikVSSolidMetadata.title,
+      date: QuikVSSolidMetadata.date,
+      author: QuikVSSolidMetadata.author,
+      desc: QuikVSSolidMetadata.desc,
+      content: QuikVSSolid,
     },
     claude: {
-      title: Claude.metadata.title,
-      date: Claude.metadata.date,
-      author: Claude.metadata.author,
-      desc: Claude.metadata.desc,
-      content: Claude.default,
+      title: ClaudeMetadata.title,
+      date: ClaudeMetadata.date,
+      author: ClaudeMetadata.author,
+      desc: ClaudeMetadata.desc,
+      content: Claude,
     },
     'tech-trend-2024': {
-      title: TechTrend2024.metadata.title,
-      date: TechTrend2024.metadata.date,
-      author: TechTrend2024.metadata.author,
-      desc: TechTrend2024.metadata.desc,
-      content: TechTrend2024.default,
+      title: TechTrend2024Metadata.title,
+      date: TechTrend2024Metadata.date,
+      author: TechTrend2024Metadata.author,
+      desc: TechTrend2024Metadata.desc,
+      content: TechTrend2024,
     },
   },
   commands: {

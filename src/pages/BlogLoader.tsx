@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Suspense, lazy, useEffect } from 'react';
+import { Suspense, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Content from '../../content.config';
 
