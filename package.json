@@ -16,6 +16,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@mdx-js/react": "^3.1.0",
     "clsx": "^2.1.1",
     "framer-motion": "^11.11.11",
     "plausible-tracker": "^0.3.9",

@@ -88,15 +88,6 @@ function Terminal() {
 
   useEffect(() => {
     if (inputRef.current) inputRef.current.focus();
-    if (history.length == 0) {
-      const bannerFunc = Content.commands['banner'];
-      if (bannerFunc) {
-        setHistory((prevItems) => [
-          ...prevItems,
-          { command: 'banner', result: bannerFunc() },
-        ]);
-      }
-    }
   }, []);
 
   return (

@@ -1,4 +1,8 @@
 import type Content from './types/content.config';
+import * as FinishedPortfolio from './src/pages/blogs/finished-portfolio.mdx';
+import * as QuikVSSolid from './src/pages/blogs/quik-vs-solid.mdx';
+import * as Claude from './src/pages/blogs/claude.mdx';
+import * as TechTrend2024 from './src/pages/blogs/tech-trend-2024.mdx';
 
 //* this file is used for the content of the website
 const Content: Content = {
@@ -59,28 +63,32 @@ const Content: Content = {
   ],
   blogs: {
     'finished-portfolio': {
-      title: "I Finally Finished My Portfolio! 🚀 Here's What I Used",
-      date: '7 Nov, 2024',
-      author: 'Goggles',
-      desc: 'My journey of creating my portfolio website and what I used in the process.',
+      title: FinishedPortfolio.metadata.title,
+      date: FinishedPortfolio.metadata.date,
+      author: FinishedPortfolio.metadata.author,
+      desc: FinishedPortfolio.metadata.desc,
+      content: FinishedPortfolio.default,
     },
     'quik-vs-solid': {
-      title: 'Quik vs SolidJS: Which one is better?',
-      date: '10 Jul, 2024',
-      author: 'Goggles',
-      desc: "Quik's fast-loading, minimal-JS approach and SolidJS's high-performance, reactive design. Who's gonna win?",
+      title: QuikVSSolid.metadata.title,
+      date: QuikVSSolid.metadata.date,
+      author: QuikVSSolid.metadata.author,
+      desc: QuikVSSolid.metadata.desc,
+      content: QuikVSSolid.default,
     },
     claude: {
-      title: 'The new Claude 3.5 Sonnet is here!',
-      date: '25 Jun, 2024',
-      author: 'Goggles',
-      desc: 'Discover Claude 3.5, an AI thats packed with new features and capabilities.',
+      title: Claude.metadata.title,
+      date: Claude.metadata.date,
+      author: Claude.metadata.author,
+      desc: Claude.metadata.desc,
+      content: Claude.default,
     },
     'tech-trend-2024': {
-      title: 'The Hottest Tech Trends Right Now! 🔥',
-      date: '20 Mar, 2024',
-      author: 'Goggles',
-      desc: 'The current tech landscape with the rapid rise of AI, Web3, serverless architectures, and cybersecurity.',
+      title: TechTrend2024.metadata.title,
+      date: TechTrend2024.metadata.date,
+      author: TechTrend2024.metadata.author,
+      desc: TechTrend2024.metadata.desc,
+      content: TechTrend2024.default,
     },
   },
   commands: {
@@ -107,14 +115,6 @@ const Content: Content = {
       window.open(Content.links['support me'], '_blank');
       return 'Redirecting...';
     },
-    banner: () => `
- ██████╗   ██████╗   ██████╗   ██████╗  ██╗      ███████╗ ███████╗ 
-██╔════╝  ██╔═══██╗ ██╔════╝  ██╔════╝  ██║      ██╔════╝ ██╔════╝ 
-██║  ███╗ ██║   ██║ ██║  ███╗ ██║  ███╗ ██║      █████╗   ███████╗ 
-██║   ██║ ██║   ██║ ██║   ██║ ██║   ██║ ██║      ██╔══╝   ╚════██║ 
-╚██████╔╝ ╚██████╔╝ ╚██████╔╝ ╚██████╔╝ ███████╗ ███████╗ ███████║ 
- ╚═════╝   ╚═════╝   ╚═════╝   ╚═════╝  ╚══════╝ ╚══════╝ ╚══════╝ 
-    `,
   },
   footer: {
     quote:
