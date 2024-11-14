@@ -1,5 +1,5 @@
 import { useLocation, useRoutes } from 'react-router-dom';
-import { AnimatePresence } from 'framer-motion';
+import { AnimatePresence } from 'motion/react';
 import { cloneElement, lazy, Suspense } from 'react';
 
 const Terminal = lazy(() => import('./pages/Terminal.tsx'));

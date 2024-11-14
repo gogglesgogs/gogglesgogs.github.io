@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from 'react';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import Plausible from 'plausible-tracker';
 import Hostname from '../components/Hostname';
 import Content from '../../content.config';

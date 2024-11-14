@@ -32,7 +32,7 @@ export default defineConfig({
             'clsx',
             'plausible-tracker',
           ],
-          animation: ['framer-motion'],
+          animation: ['motion/react'],
           content: ['/content.config.ts'],
           blogs: [
             '/src/pages/blogs/claude.mdx',
