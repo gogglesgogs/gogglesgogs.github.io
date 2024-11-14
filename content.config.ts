@@ -1,4 +1,16 @@
-import type Content from './types/content.config';
+import type Content from './src/types/content.config';
+import FinishedPortfolio, {
+  metadata as FinishedPortfolioMetadata,
+} from './src/pages/blogs/finished-portfolio.mdx';
+import QuikVSSolid, {
+  metadata as QuikVSSolidMetadata,
+} from './src/pages/blogs/quik-vs-solid.mdx';
+import Claude, {
+  metadata as ClaudeMetadata,
+} from './src/pages/blogs/claude.mdx';
+import TechTrend2024, {
+  metadata as TechTrend2024Metadata,
+} from './src/pages/blogs/tech-trend-2024.mdx';
 
 //* this file is used for the content of the website
 const Content: Content = {
@@ -59,28 +71,32 @@ const Content: Content = {
   ],
   blogs: {
     'finished-portfolio': {
-      title: "I Finally Finished My Portfolio! 🚀 Here's What I Used",
-      date: '7 Nov, 2024',
-      author: 'Goggles',
-      desc: 'My journey of creating my portfolio website and what I used in the process.',
+      title: FinishedPortfolioMetadata.title,
+      date: FinishedPortfolioMetadata.date,
+      author: FinishedPortfolioMetadata.author,
+      desc: FinishedPortfolioMetadata.desc,
+      content: FinishedPortfolio,
     },
     'quik-vs-solid': {
-      title: 'Quik vs SolidJS: Which one is better?',
-      date: '10 Jul, 2024',
-      author: 'Goggles',
-      desc: "Quik's fast-loading, minimal-JS approach and SolidJS's high-performance, reactive design. Who's gonna win?",
+      title: QuikVSSolidMetadata.title,
+      date: QuikVSSolidMetadata.date,
+      author: QuikVSSolidMetadata.author,
+      desc: QuikVSSolidMetadata.desc,
+      content: QuikVSSolid,
     },
     claude: {
-      title: 'The new Claude 3.5 Sonnet is here!',
-      date: '25 Jun, 2024',
-      author: 'Goggles',
-      desc: 'Discover Claude 3.5, an AI thats packed with new features and capabilities.',
+      title: ClaudeMetadata.title,
+      date: ClaudeMetadata.date,
+      author: ClaudeMetadata.author,
+      desc: ClaudeMetadata.desc,
+      content: Claude,
     },
     'tech-trend-2024': {
-      title: 'The Hottest Tech Trends Right Now! 🔥',
-      date: '20 Mar, 2024',
-      author: 'Goggles',
-      desc: 'The current tech landscape with the rapid rise of AI, Web3, serverless architectures, and cybersecurity.',
+      title: TechTrend2024Metadata.title,
+      date: TechTrend2024Metadata.date,
+      author: TechTrend2024Metadata.author,
+      desc: TechTrend2024Metadata.desc,
+      content: TechTrend2024,
     },
   },
   commands: {
@@ -107,14 +123,6 @@ const Content: Content = {
       window.open(Content.links['support me'], '_blank');
       return 'Redirecting...';
     },
-    banner: () => `
- ██████╗   ██████╗   ██████╗   ██████╗  ██╗      ███████╗ ███████╗ 
-██╔════╝  ██╔═══██╗ ██╔════╝  ██╔════╝  ██║      ██╔════╝ ██╔════╝ 
-██║  ███╗ ██║   ██║ ██║  ███╗ ██║  ███╗ ██║      █████╗   ███████╗ 
-██║   ██║ ██║   ██║ ██║   ██║ ██║   ██║ ██║      ██╔══╝   ╚════██║ 
-╚██████╔╝ ╚██████╔╝ ╚██████╔╝ ╚██████╔╝ ███████╗ ███████╗ ███████║ 
- ╚═════╝   ╚═════╝   ╚═════╝   ╚═════╝  ╚══════╝ ╚══════╝ ╚══════╝ 
-    `,
   },
   footer: {
     quote:

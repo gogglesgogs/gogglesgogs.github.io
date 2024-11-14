@@ -1,3 +1,5 @@
+import { MDXContent } from 'mdx/types';
+
 interface item {
   /**
    * First heading of the item.
@@ -20,11 +22,9 @@ interface item {
   /**
    * A link that will be applied to the first heading.
    *
-   * Pass ```null``` to remove the link.
-   *
-   * @type {string | null}
+   * @type {string}
    */
-  link: string | null;
+  link?: string;
 }
 
 interface blogItems {
@@ -52,6 +52,12 @@ interface blogItems {
    * @type {string}
    */
   desc: string;
+  /**
+   * The MDXContent of the imported blog.mdx file.
+   *
+   * @type {MDXContent}
+   */
+  content: MDXContent;
 }
 
 interface footer {
@@ -90,11 +96,9 @@ declare interface Content {
   /**
    * Another name or nickname that will be displayed when hovering the name element.
    *
-   * You can pass ```null``` to remove the hover name.
-   *
-   * @type {string | null}
+   * @type {string}
    */
-  hover_name: string | null;
+  hover_name?: string;
   /**
    * Your address.
    *
@@ -146,11 +150,9 @@ declare interface Content {
   /**
    * The subfooter easter egg where you can put a famous quote that you like.
    *
-   * You can pass the value ```null``` to remove it.
-   *
-   * @type {footer | null}
+   * @type {footer}
    */
-  footer: footer | null;
+  footer?: footer;
 }
 
 export default Content;

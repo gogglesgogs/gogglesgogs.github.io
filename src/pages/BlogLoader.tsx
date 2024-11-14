@@ -1,12 +1,7 @@
 import { motion } from 'framer-motion';
-import { Suspense, lazy, useEffect } from 'react';
+import { Suspense, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Content from '../../content.config';
-
-const ClaudeBlog = lazy(() => import('./blogs/claude.mdx'));
-const QuikVsSolid = lazy(() => import('./blogs/quik-vs-solid.mdx'));
-const FinishedPortfolio = lazy(() => import('./blogs/finished-portfolio.mdx'));
-const TechTrend2024 = lazy(() => import('./blogs/tech-trend-2024.mdx'));
 
 const visible = { opacity: 1, transition: { duration: 0.5 } };
 const hidden = { opacity: 0, transition: { duration: 0.5 } };
@@ -15,7 +10,7 @@ const elementVariants = {
   hidden,
 };
 
-function Claude() {
+function BlogLoader() {
   const { blogId } = useParams();
 
   if (!blogId) return (window.location.href = '/blog');
@@ -23,20 +18,7 @@ function Claude() {
 
   const blogData = Content.blogs[blogId];
 
-  const getBlog = (id: string): JSX.Element => {
-    switch (id) {
-      case 'claude':
-        return <ClaudeBlog />;
-      case 'quik-vs-solid':
-        return <QuikVsSolid />;
-      case 'finished-portfolio':
-        return <FinishedPortfolio />;
-      case 'tech-trend-2024':
-        return <TechTrend2024 />;
-      default:
-        return <div>Error loading blog</div>;
-    }
-  };
+  const BlogComponent = blogData.content;
 
   useEffect(() => {
     document.title = `${blogData.title} - Goggles Gogs`;
@@ -66,11 +48,11 @@ function Claude() {
           className="prose prose-neutral dark:prose-invert"
           variants={elementVariants}
         >
-          {getBlog(blogId)}
+          {BlogComponent ? <BlogComponent /> : 'Error Loading Blog'}
         </motion.article>
       </Suspense>
     </motion.section>
   );
 }
 
-export default Claude;
+export default BlogLoader;
