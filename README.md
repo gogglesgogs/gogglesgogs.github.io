@@ -18,5 +18,5 @@
 
 ### Inspirations:
 
-- [https://nexxel.dev/ ↗️](https://nexxel.dev/)
-- [https://paco.me/ ↗️](https://paco.me)
+- [nexxel.dev/ ↗️](https://nexxel.dev)
+- [paco.me/ ↗️](https://paco.me)
