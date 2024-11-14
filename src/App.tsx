@@ -33,7 +33,7 @@ function App() {
 
 	if (!element)
 		return (
-			<div className='prose prose-neutral w-full text-center dark:prose-invert'>
+			<div className="prose prose-neutral w-full text-center dark:prose-invert">
 				oops! an unexpected error has occurred.
 			</div>
 		);
@@ -41,13 +41,13 @@ function App() {
 	return (
 		<Suspense
 			fallback={
-				<div className='absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2'>
+				<div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
 					Loading...
 				</div>
 			}
 		>
 			<Nav />
-			<AnimatePresence mode='wait'>
+			<AnimatePresence mode="wait">
 				{cloneElement(element, { key: location.pathname })}
 			</AnimatePresence>
 			<Footer />

@@ -14,9 +14,9 @@
 - [Typescript ↗️](https://www.typescriptlang.org/)
 - [Vite ↗️](https://vite.dev/)
 - [Tailwind ↗️](https://tailwindcss.com/)
-- [Framer Motion ↗️](https://www.framer.com/motion/)
+- [Motion ↗️](https://motion.dev/)
 
 ### Inspirations:
 
-- [nexxel.dev/ ↗️](https://nexxel.dev)
-- [paco.me/ ↗️](https://paco.me)
+- [nexxel.dev ↗️](https://nexxel.dev)
+- [paco.me ↗️](https://paco.me)
