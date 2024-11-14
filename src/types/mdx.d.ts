@@ -1,13 +1,13 @@
 interface BlogMetadata {
-  title: string;
-  date: string;
-  author: string;
-  desc: string;
+	title: string;
+	date: string;
+	author: string;
+	desc: string;
 }
 
 declare module '*.mdx' {
-  import { Element } from 'mdx/types';
+	import { Element } from 'mdx/types';
 
-  export const metadata: BlogMetadata;
-  export default function MDXContent(): Element;
+	export const metadata: BlogMetadata;
+	export default function MDXContent(): Element;
 }
