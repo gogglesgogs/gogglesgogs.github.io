@@ -26,26 +26,26 @@ function BlogLoader() {
 
 	return (
 		<motion.section
-			initial='hidden'
-			animate='visible'
-			exit='hidden'
+			initial="hidden"
+			animate="visible"
+			exit="hidden"
 			variants={{ visible, hidden }}
 		>
 			<motion.h1
-				className='mb-2 max-w-[650px] text-3xl font-semibold tracking-tighter'
+				className="mb-2 max-w-[650px] text-3xl font-semibold tracking-tighter"
 				variants={elementVariants}
 			>
 				{blogData.title}
 			</motion.h1>
 			<motion.div
-				className='mb-8 flex max-w-[650px] items-center gap-3 text-sm text-neutral-600 dark:text-neutral-400'
+				className="mb-8 flex max-w-[650px] items-center gap-3 text-sm text-neutral-600 dark:text-neutral-400"
 				variants={elementVariants}
 			>
 				<span>{blogData.author}</span> ~ <span>{blogData.date}</span>
 			</motion.div>
-			<Suspense fallback={<div className='w-full text-center'>Loading...</div>}>
+			<Suspense fallback={<div className="w-full text-center">Loading...</div>}>
 				<motion.article
-					className='prose prose-neutral dark:prose-invert'
+					className="prose prose-neutral dark:prose-invert"
 					variants={elementVariants}
 				>
 					{BlogComponent ? <BlogComponent /> : 'Error Loading Blog'}
