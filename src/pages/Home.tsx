@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import Content from '../../content.config';
 
 const visible = { opacity: 1, transition: { duration: 0.5 } };
