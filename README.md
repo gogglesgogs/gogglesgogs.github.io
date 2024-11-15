@@ -1,5 +1,7 @@
 # Goggles's Portfolio
 
+a simple, minimal portfolio and blog website
+
 ### Links:
 
 - **main**: [goggles.pages.dev ↗️](https://goggles.pages.dev)
@@ -10,11 +12,18 @@
 
 ### Frameworks:
 
-- [React ↗️](https://react.dev/)
 - [Typescript ↗️](https://www.typescriptlang.org/)
 - [Vite ↗️](https://vite.dev/)
+- [React ↗️](https://react.dev/)
+- [React Router ↗️](https://reactrouter.com/)
+- [React Query ↗️](https://tanstack.com/query/latest)
 - [Tailwind ↗️](https://tailwindcss.com/)
 - [Motion ↗️](https://motion.dev/)
+
+### Platforms:
+
+- [Deployed on Cloudflare Pages ↗️](https://pages.cloudflare.com/)
+- [Blog Views API ↗️](https://github.com/gogglesgogs/portfolio-blog-views) powered by [Cloudflare Workers ↗️](https://workers.cloudflare.com/)
 
 ### Inspirations:
 
