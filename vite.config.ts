@@ -31,6 +31,7 @@ export default defineConfig({
 						'tailwind-merge',
 						'clsx',
 						'plausible-tracker',
+						'@tanstack/react-query',
 					],
 					animation: ['motion/react'],
 					content: ['/content.config.ts'],

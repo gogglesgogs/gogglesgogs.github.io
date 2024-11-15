@@ -16,6 +16,7 @@
 		"preview": "vite preview"
 	},
 	"dependencies": {
+		"@tanstack/react-query": "^5.60.2",
 		"clsx": "^2.1.1",
 		"motion": "^11.11.15",
 		"plausible-tracker": "^0.3.9",
@@ -28,6 +29,7 @@
 		"@eslint/js": "^9.14.0",
 		"@mdx-js/rollup": "^3.1.0",
 		"@tailwindcss/typography": "^0.5.15",
+		"@tanstack/eslint-plugin-query": "^5.60.1",
 		"@types/mdx": "^2.0.13",
 		"@types/react": "^18.3.12",
 		"@types/react-dom": "^18.3.1",
