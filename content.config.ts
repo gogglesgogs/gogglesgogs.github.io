@@ -2,6 +2,9 @@ import type Content from './src/types/content.config';
 import FinishedPortfolio, {
 	metadata as FinishedPortfolioMetadata,
 } from './src/pages/blogs/finished-portfolio.mdx';
+import ErrorCorrection, {
+	metadata as ErrorCorrectionMetadata,
+} from './src/pages/blogs/error-correction.mdx';
 import QuikVSSolid, {
 	metadata as QuikVSSolidMetadata,
 } from './src/pages/blogs/quik-vs-solid.mdx';
@@ -76,6 +79,13 @@ const Content: Content = {
 			author: FinishedPortfolioMetadata.author,
 			desc: FinishedPortfolioMetadata.desc,
 			content: FinishedPortfolio,
+		},
+		'error-correction': {
+			title: ErrorCorrectionMetadata.title,
+			date: ErrorCorrectionMetadata.date,
+			author: ErrorCorrectionMetadata.author,
+			desc: ErrorCorrectionMetadata.desc,
+			content: ErrorCorrection,
 		},
 		'quik-vs-solid': {
 			title: QuikVSSolidMetadata.title,
