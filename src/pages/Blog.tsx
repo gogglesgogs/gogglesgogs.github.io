@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
+import { useQuery } from '@tanstack/react-query';
 import Content from '../../content.config';
 
 const visible = { opacity: 1, transition: { duration: 0.5 } };
@@ -10,7 +11,42 @@ const elementVariants = {
 	hidden,
 };
 
+const fetchAllBlogViews = async (blogId: string[]) => {
+	const results = await Promise.all(
+		blogId.map(async blogId => {
+			const response = await fetch(
+				`https://blog-views.goggles.workers.dev?blogid=${blogId}`,
+			);
+			if (!response.ok) {
+			}
+			const data = await response.json();
+			return { blogId, viewcount: data.viewcount ?? 0 };
+		}),
+	);
+	return results.reduce(
+		(acc, { blogId, viewcount }) => {
+			acc[blogId] = viewcount;
+			return acc;
+		},
+		{} as Record<string, number>,
+	);
+};
+
 function Blog() {
+	const blogIds = Object.entries(Content.blogs).map(arr => {
+		return arr[0];
+	});
+
+	const { data, error, isLoading } = useQuery({
+		queryKey: ['allBlogViews', blogIds],
+		queryFn: () => fetchAllBlogViews(blogIds),
+		enabled: blogIds.length > 0,
+		retry: false,
+		refetchOnWindowFocus: false,
+		refetchOnReconnect: false,
+		staleTime: Infinity,
+	});
+
 	useEffect(() => {
 		document.title = 'Blogs - Goggles Gogs';
 	}, []);
@@ -63,8 +99,13 @@ function Blog() {
 								<p className="prose prose-neutral dark:prose-invert">
 									{value.desc.toLowerCase()}
 								</p>
-								<p className="text-sm text-neutral-600 dark:text-neutral-400">
-									{value.date.toLowerCase()} • {value.author.toLowerCase()}
+								<p className="flex flex-row items-center gap-2 text-sm text-neutral-600 dark:text-neutral-400">
+									<span>{value.date.toLowerCase()}</span> ~
+									{isLoading && (
+										<span className="h-3 w-14 animate-pulse rounded-full bg-neutral-700"></span>
+									)}
+									{data && <span>{data[key]} views</span>}
+									{error && <span>error: viewcounts: failed to fetch</span>}
 								</p>
 							</div>
 						</Link>

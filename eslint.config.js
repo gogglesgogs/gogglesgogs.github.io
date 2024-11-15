@@ -3,12 +3,14 @@ import globals from 'globals';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
 import tseslint from 'typescript-eslint';
+import pluginQuery from '@tanstack/eslint-plugin-query';
 import * as mdx from 'eslint-plugin-mdx';
 
 export default tseslint.config({
 	ignores: ['dist'],
 	...mdx.flat,
 	...mdx.flatCodeBlocks,
+	...pluginQuery.configs['flat/recommended'],
 	settings: { react: { version: '18.3' } },
 	extends: [
 		tseslint.configs.recommendedTypeChecked,
@@ -26,6 +28,7 @@ export default tseslint.config({
 	plugins: {
 		'react-hooks': reactHooks,
 		'react-refresh': reactRefresh,
+		'@tanstack/query': pluginQuery,
 		react,
 	},
 	rules: {
