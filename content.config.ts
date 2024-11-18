@@ -53,10 +53,15 @@ const Content: Content = {
 	],
 	projects: [
 		{
+			mainHeading: 'scribblyinc/scribbly',
+			secondHeading: 'creator and maintainer',
+			description: 'collaborate, sketch, and create on your digital whiteboard.',
+			link: 'https://github.com/scribblyinc/scribbly',
+		},
+		{
 			mainHeading: 'gogglesinc/gogglesinc.github.io',
 			secondHeading: 'creator and maintainer',
-			description:
-				'a tech company web app that utilizes react, tailwindcss, and other frameworks.',
+			description: 'a tech company web app that utilizes react, tailwindcss, and other frameworks.',
 			link: 'https://github.com/gogglesinc/gogglesinc.github.io',
 		},
 		{
@@ -64,12 +69,6 @@ const Content: Content = {
 			secondHeading: 'creator and maintainer',
 			description: 'a simple todo app that records your tasks.',
 			link: 'https://github.com/gogglesgogs/todo-app',
-		},
-		{
-			mainHeading: 'gogglesinc/',
-			secondHeading: 'founder',
-			description: 'a imaginary, individually owned tech company by me.',
-			link: 'https://github.com/gogglesinc',
 		},
 	],
 	blogs: {
