@@ -53,10 +53,10 @@ const Content: Content = {
 	],
 	projects: [
 		{
-			mainHeading: 'scribblyinc/scribbly',
+			mainHeading: 'thepinboardcompany/scribbly',
 			secondHeading: 'creator and maintainer',
 			description: 'collaborate, sketch, and create on your digital whiteboard.',
-			link: 'https://github.com/scribblyinc/scribbly',
+			link: 'https://github.com/ThePinboardCompany/scribbly',
 		},
 		{
 			mainHeading: 'gogglesinc/gogglesinc.github.io',
