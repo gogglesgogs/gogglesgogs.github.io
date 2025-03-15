@@ -20,6 +20,7 @@ const fetchBlogViews = async (blogId: string) => {
 };
 
 const incrementBlogViews = async (blogId: string) => {
+	return;
 	const res = await fetch(
 		`https://blog-views.goggles.workers.dev/?blogid=${blogId}`,
 		{

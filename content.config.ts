@@ -17,11 +17,11 @@ import TechTrend2024, {
 
 //* this file is used for the content of the website
 const Content: Content = {
-	name: 'goggles.gogs',
-	hover_name: 'nguyen khoa',
+	name: 'nguyen khoa',
+	hover_name: 'goggles gogs',
 	addr: 'hung yen, vietnam',
 	job: 'high school student @ Greenfield School',
-	bio: "i'm a 16 y/o teenager whos good at problem solving and interested in computer science. currently learning web development to pursue my career.",
+	bio: "i'm just a curious high school student with a passion for computer science. let's say i can be a quick learner who enjoys tackling challenges, working with others while receiving experience in developing small coding projects. i'm currently learning web development to pursue my career. ",
 	links: {
 		email: 'mailto:ngkhoa0075@gmail.com',
 		discord: 'https://discordapp.com/users/799597159661699112',
@@ -55,13 +55,15 @@ const Content: Content = {
 		{
 			mainHeading: 'thepinboardcompany/scribbly',
 			secondHeading: 'creator and maintainer',
-			description: 'collaborate, sketch, and create on your digital whiteboard.',
+			description:
+				'collaborate, sketch, and create on your digital whiteboard.',
 			link: 'https://github.com/ThePinboardCompany/scribbly',
 		},
 		{
 			mainHeading: 'gogglesinc/gogglesinc.github.io',
 			secondHeading: 'creator and maintainer',
-			description: 'a tech company web app that utilizes react, tailwindcss, and other frameworks.',
+			description:
+				'a tech company web app that utilizes react, tailwindcss, and other frameworks.',
 			link: 'https://github.com/gogglesinc/gogglesinc.github.io',
 		},
 		{
