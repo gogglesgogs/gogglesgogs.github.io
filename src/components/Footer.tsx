@@ -1,5 +1,4 @@
 import Content from '../../content.config';
-import cn from '../utils/cn';
 
 function Footer() {
 	return (
