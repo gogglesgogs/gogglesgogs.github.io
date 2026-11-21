@@ -1,5 +1,4 @@
 import Content from '../../content.config';
-import cn from '../utils/cn';
 
 function Footer() {
 	return (
@@ -24,29 +23,6 @@ function Footer() {
 					</figcaption>
 				</figure>
 			)}
-			<p
-				className={cn(
-					'py-4',
-					Content.footer
-						? 'border-t border-neutral-400 dark:border-neutral-600'
-						: '',
-				)}
-			>
-				p/s: here are the older versions of this website. note that it may not
-				work as well as the current one. <br />
-				<a
-					className="font-medium underline decoration-neutral-400 decoration-[0.1em] underline-offset-2 dark:decoration-neutral-600"
-					href="https://gogglesgogs.github.io/v1"
-				>
-					version 1
-				</a>{' '}
-				<a
-					className="font-medium underline decoration-neutral-400 decoration-[0.1em] underline-offset-2 dark:decoration-neutral-600"
-					href="https://gogglesgogs.github.io/v2"
-				>
-					version 2
-				</a>
-			</p>
 		</footer>
 	);
 }
